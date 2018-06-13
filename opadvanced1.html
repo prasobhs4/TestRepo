@@ -1,0 +1,122 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+		    <title>Op status</title>
+				    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+				    <link rel="stylesheet" type="text/css" href="style1.css">
+				    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Lobster+Two" rel="stylesheet">
+						<link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
+						
+		</head>
+		<body background-image="opimage.jpg">
+					<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+					<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+					<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				    <a class="navbar-brand" href="#">OPstatus</a>
+				    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				    </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="opadvanced1.html">Home </a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Options
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="Search.html">Project Search</a>
+	          <a class="dropdown-item" href="#">Update Entry</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="#">Delete Entry</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="https://www.google.com">Google</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link" href="Search.html">Search Projects</a>
+              </li>
+	    </ul>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+		  <section>
+		    <div class="container">
+		      <!-- <div class="boxmodel"> -->
+		  <form action = "http://127.0.0.1:8081/opstatus" method = "POST"><br>
+				<br><h5 style ="font-family: 'Song Myung', serif; font-size: 25px;color: brown;">Enter Project Details:  <span class="badge badge-secondary">CAMS</span></h5><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Releasedt">Release Date:</label>
+		    <input type="Date" name="Releasedt" class="form-control" id="Releasedt" aria-describedby="emailHelp" placeholder="Enter Release Date"  required>
+		    </div><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Workstream">Workstream  :</label>
+		    <input type="text" name="Workstream" class="form-control" id="Workstream" aria-describedby="emailHelp" placeholder="Eg.Project Name">
+		    </div><br>
+		    <div class="col-5  form-group-sm">
+            <label for="Asset">Asset</label>
+            <select id="Asset" name="Asset" class="form-control">
+            <option selected>Choose...</option>
+		    	<option value="COLA" >COLA</option>
+		    	<option value="CRMC">CRMC</option>    	
+		    	<option value="CST">CST</option>
+		    	<option value="CTAX">CTAX</option> 
+		    	<option value="COPS">COPS</option> 
+		    	<option value="HH">HH</option> 
+		    	<option value="CARTS">CARTS</option> 
+		    	<option value="CATS">CATS</option>  
+            </select>
+            </div><br>
+            <div class="col-5 form-group-sm" >
+		    <label for="Projectid">Project id :</label>
+		    <input type="text"  name="Projectid" class="form-control" id="Projectid" aria-describedby="emailHelp" placeholder="Enter Project id">
+		    </div><br>
+            <div class="col-5 form-group-sm">
+		    <label for="SPOC">SPOC :</label>
+		    <input type="text"  name="SPOC" class="form-control" id="SPOC" aria-describedby="emailHelp" placeholder="Enter SPOC">
+		    </div><br>		    
+            <div class="col-5  form-group-sm">
+		    <label for="Busval">Business value:</label>
+		    <input type="text"  name="busval"  class="form-control" id="Busval" aria-describedby="emailHelp" placeholder="Enter Busval">
+		    </div><br>		   
+		  		
+		    <div class="col-5  form-group-sm">
+		    <label for="Analysisdt">Analysis(End Date)*:</label>
+		    <input type="Date"  name="Analysisend" class="form-control" id="Analysisdt" aria-describedby="emailHelp" placeholder="Enter Analysis End date" required>
+		    </div><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Analysisdt">Design(End Date)*:</label>
+		    <input type="Date"  name="designend" class="form-control" id="Designdt" aria-describedby="emailHelp" placeholder="Enter Design End date" required></div><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Analysisdt">Build(End Date)*:</label>
+		    <input type="Date"  name="Buildend" class="form-control" id="Builddt" aria-describedby="emailHelp" placeholder="Enter Building End date" required></div><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Analysisdt">Testing(End Date)*:</label>
+		    <input type="Date"  name="testend" class="form-control" id="Testdt" aria-describedby="emailHelp" placeholder="Enter Testing End date" required></div><br>
+		    <div class="col-5  form-group-sm">
+		    <label for="Analysisdt">Implementation(End Date)*:</label>
+		    <input type="Date"  name="impend" class="form-control" id="Impdt" aria-describedby="emailHelp" placeholder="Enter Implementation End date" required></div><br>
+
+		 
+			 <div class="col-5  form-group-sm">
+			    <label for="exampleFormControlTextarea1">Comments</label>
+			    <textarea class="form-control input-lg"  name="comments" id="exampleFormControlTextarea1" rows="3" required></textarea>
+			  </div><br>	 
+		    <!-- <button onclick="myFunction()">Submit</button> -->
+		    <div class="col-5  form-group-sm">
+		    <input type="Submit" value="Submit">
+		<input type="Reset" value="Reset">
+	</div>
+    
+		  </form> <br><br><br></div></div>
+		  <section>
+
+            </div>
+		</body>
+		</html>
