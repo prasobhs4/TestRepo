@@ -10,6 +10,8 @@ var app = express();
 var path = require("path");  
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 console.log('inside module');
+var PORT = process.env.PORT||3000;
+
 
 MongoClient.connect("mongodb://localhost:27017/", function(err, db) {
 
@@ -46,9 +48,7 @@ MongoClient.connect("mongodb://localhost:27017/", function(err, db) {
        })
        res.sendFile(path.join(__dirname+'/opadvanced2.html'));
    });
-
-        var server = app.listen(8081, function() {
-        var port = server.address().port;
-        console.log("Express server listening on port %s.", port);
+/* var port = server.address().port;*/
+        var server = app.listen(PORT, function() {
     });
 });
